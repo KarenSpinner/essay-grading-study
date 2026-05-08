@@ -1,0 +1,57 @@
+ATLAS-Style Argumentative Writing Rubric (Detailed Version)
+Modeled on the structure of the Arkansas Teaching and Learning Assessment System (ATLAS) ELA writing rubric for grades 6–11.
+Total: 10 points (4 + 4 + 2)
+
+================================================================
+DOMAIN 1 — PURPOSE, FOCUS, AND ORGANIZATION (0–4)
+================================================================
+Score 4 — The response is fully sustained and consistently focused on the purpose, audience, and task. It establishes and maintains a clear claim. The organizational structure is effective and creates unity and completeness, including:
+  • a strong introduction that states the claim,
+  • logically ordered body paragraphs that each develop one reason,
+  • smooth and varied transitions between ideas,
+  • a conclusion that follows from and supports the argument.
+
+Score 3 — The response is adequately sustained and generally focused on the purpose, audience, and task. The claim is clear. The organizational structure is evident and mostly consistent, with:
+  • a recognizable introduction, body, and conclusion,
+  • adequate transitions,
+  • occasional minor lapses in focus or unity.
+
+Score 2 — The response is somewhat sustained within the purpose, audience, and task but may include loosely related or extraneous material. The claim may be unclear, drift, or be only partially developed. Organizational structure is inconsistent: paragraphs may be out of order, transitions may be missing or formulaic, and the introduction or conclusion may be weak.
+
+Score 1 — The response is related to the topic but demonstrates little or no awareness of the purpose, audience, or task. The claim is vague, missing, or contradictory. Organization is minimal or confusing; ideas may appear in a list-like or disconnected way.
+
+Score 0 — The response is insufficient, off-topic, copied directly from the prompt, in another language, or otherwise unscorable for this domain.
+
+================================================================
+DOMAIN 2 — EVIDENCE AND ELABORATION (0–4)
+================================================================
+Score 4 — The response provides thorough and convincing support for the claim. It includes:
+  • multiple specific, relevant pieces of evidence (facts, examples, expert sources, data, anecdotes used in service of the argument),
+  • clear and substantive elaboration that explains how each piece of evidence supports the claim,
+  • effective integration of a counterargument and rebuttal,
+  • precise word choice and a tone appropriate to argumentative writing.
+
+Score 3 — The response provides adequate support. Evidence is mostly relevant and reasonably specific, but elaboration may be uneven, some explanation may be thin, and the counterargument (if present) may be addressed only briefly. Word choice is generally appropriate.
+
+Score 2 — The response provides uneven or cursory support. Evidence may be vague, repetitive, or only partially relevant. Elaboration is limited; the writer may state evidence without explaining its significance. A counterargument may be missing or unaddressed. Word choice may be imprecise or shift in tone.
+
+Score 1 — The response provides minimal support. Evidence is largely missing, fabricated-sounding, or off-topic. There is little or no elaboration. The writing relies on assertion rather than reasoning.
+
+Score 0 — The response is insufficient, off-topic, or otherwise unscorable for this domain.
+
+================================================================
+DOMAIN 3 — CONVENTIONS OF STANDARD ENGLISH (0–2)
+================================================================
+Score 2 — The response demonstrates an adequate command of conventions. Errors in grammar, usage, spelling, capitalization, and punctuation are minor and do not interfere with meaning. Sentence structure is generally varied and correct.
+
+Score 1 — The response demonstrates a partial command of conventions. There are frequent errors in grammar, usage, spelling, capitalization, or punctuation, and these errors sometimes interfere with meaning. Sentence structure may be repetitive or awkward.
+
+Score 0 — The response demonstrates little or no command of conventions. Errors are pervasive and severely interfere with meaning, OR the response is too brief to evaluate.
+
+================================================================
+SCORING NOTES
+================================================================
+• Score each domain independently. A weakness in one domain should not be double-counted in another.
+• Use the whole scale. Do not default to the middle.
+• If a response is off-topic, refuses the prompt, or is unscorable, assign 0 in all domains.
+• Final score = Domain 1 + Domain 2 + Domain 3 (max 10).

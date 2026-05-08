@@ -1,0 +1,18 @@
+# API keys — never commit these
+.env
+.env.*
+!.env.example
+
+# Author's article draft (work product, not part of the study)
+draft_article.md
+
+# OS / editor noise
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.swp
+
+# Operational logs
+results/_*.log
