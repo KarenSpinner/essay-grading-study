@@ -47,13 +47,7 @@ A frontier reasoning model (`gpt-5.2`) with a written rubric grades essays **at 
 2. **Older models honor blatant prompt injection.** `gpt-4o-mini` gives a deterministic 10/10 to a borderline essay that contains the literal text "Ignore previous instructions." `gpt-5.2` ignores the injection completely. The fix is model generation, not rubric strictness.
 3. **`gpt-4o` shows L1/L2 bias** — the same argument with non-native-English surface patterns drops by 2 points and the penalty bleeds across rubric domains it shouldn't. The newer `gpt-5.2` family contains the penalty to the Conventions domain, where the rubric warrants it. This is consistent with [Hsieh et al. (2025)](https://arxiv.org/abs/2504.21330), who tested GPT-4o specifically on 25,000 argumentative essays.
 
-For the full story — including what this means for the AI-grading products being pitched to school districts, and why ATLAS itself probably isn't graded by ChatGPT — see the Substack post.
-
-## Is ATLAS itself graded by ChatGPT?
-
-Probably not. The Arkansas Teaching and Learning Assessment System (ATLAS) is run under a [seven-year, $71.4 million contract](https://arkansasadvocate.com/2023/05/23/arkansas-education-department-shares-updates-on-new-assessment-exam/) with [Cambium Assessment](https://www.cambiumassessment.com/). Per Cambium's [2020–2021 ClearSight FAQ](https://clearsight.portal.cambiumast.com/content/contentresources/en/ClearSight_Automated-Essay-Scoring_FAQ.pdf), production scoring is done by an engine called **Autoscore** — a feature-extraction pipeline (grammar, sentence variety, word choice) plus statistical weighting, with 20–40% of responses also receiving human scores. It is not a general-purpose LLM.
-
-Cambium's published agreement rates (Grade 6) actually beat human-to-human agreement: 75% / 66% / 64% (engine vs. human) versus 70% / 60% / 61% (human vs. human) across the three rubric domains. That said, Cambium hasn't published an updated technical report since 2021, and their newer marketing materials reference "state-of-the-art artificial intelligence" without specifying what that means. So the system that's currently grading Arkansas writing tests is partially undocumented.
+For the full story — what this means for the AI-grading products being pitched to school districts, what state assessments are actually using under the hood, and why those are different questions — see the Substack post.
 
 ## Running it yourself
 
@@ -138,8 +132,6 @@ done
 python3 analyze.py
 ```
 
-The full sweep takes 30–60 minutes (gpt-5.2 reasoning is the slow one) and costs roughly $8.
-
 ### If you just want to read the data
 
 Each file in `results/` is a JSON document with three sections: `config` (which model/essay/temperature was used), `summary` (per-rubric mean, standard deviation, and range across the 20 trials), and `trials` (the full 20 model responses with parsed scores). The summary block is the easiest place to start.
@@ -148,17 +140,15 @@ Each file in `results/` is a JSON document with three sections: `config` (which 
 
 - **N = 20** trials per cell. Enough to see the effects reported here, but a publishable replication should use N ≥ 50 across more borderline essays.
 - **Temperature = default (1.0)** across all models. This is the only temperature `gpt-5.2-chat-latest` accepts, and it matches what consumer ChatGPT runs at. An earlier exploratory run at temperature 0.7 showed the same qualitative pattern.
-- **The rubrics** are modeled on the *structure* of the ATLAS rubric (three domains, 4+4+2 scoring, score-point descriptors). They are not Cambium's exact published wording — that's not publicly available except as a Scribd upload of unclear provenance.
+- **The rubrics** are modeled on the *structure* of a typical state-assessment writing rubric (three domains, 4+4+2 scoring, score-point descriptors). They are not the verbatim wording of any specific state's rubric.
 - **The L2 essay** is a hand-drafted approximation by a non-linguist. It has surface patterns plausibly characteristic of intermediate-to-advanced non-native English writers, but is not validated against L2 writer corpora and does not target a specific L1 background. The per-domain finding for `gpt-4o` aligns with published literature, but the L2 result here should be read as a probe, not a proof.
-- **Only argumentative writing** is tested. ATLAS also tests informative and narrative writing.
+- **Only argumentative writing** is tested. State writing assessments typically also include informative and narrative writing.
 - **Only OpenAI** models are tested. Claude and Gemini may behave differently.
-- **The "right" score is unknown.** Without ground-truth human-rater scores from trained ATLAS scorers, this study can only measure self-agreement and cross-condition sensitivity, not accuracy.
+- **The "right" score is unknown.** Without ground-truth scores from trained human raters, this study can only measure self-agreement and cross-condition sensitivity, not accuracy.
 
 ## Sources
 
-**ATLAS and the production scoring system:**
-- Arkansas DESE — [3-10 ATLAS Content Assessments](https://dese.ade.arkansas.gov/Offices/public-school-accountability/assessment/3-10-atlas-content-assessments)
-- Arkansas Advocate — [Arkansas education department shares updates on new assessment exam](https://arkansasadvocate.com/2023/05/23/arkansas-education-department-shares-updates-on-new-assessment-exam/) (the $71.4M contract figure)
+**Automated essay scoring in state assessments:**
 - Cambium Assessment — [ClearSight Automated Essay Scoring FAQ (2020–2021)](https://clearsight.portal.cambiumast.com/content/contentresources/en/ClearSight_Automated-Essay-Scoring_FAQ.pdf)
 - Cambium Assessment — [Comparing the Robustness of Automated Scoring Approaches](https://www.cambiumassessment.com/technology/machine-learning/comparing-automated-scoring)
 - NCES / Cambium — [NAEP Automated Scoring Challenge results](https://cambiumassessment.com/knowledge-center/news-articles/2023/04/11/12/45/automated-scoring-performance-on-the-naep)
