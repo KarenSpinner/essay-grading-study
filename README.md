@@ -4,7 +4,7 @@ A small reproducible study testing whether large language models — the kind be
 
 This repository contains everything needed to rerun the experiment: the essays, the rubrics, the code, and the raw results from 1,120 API calls across four OpenAI models. **You don't need to be a programmer to run it** — see [Running it yourself](#running-it-yourself) below.
 
-The full writeup of findings and what they mean is on Substack: **[link to the post]**. This README is the technical companion.
+The full writeup of findings and what they mean is on Substack. This README is the technical companion.
 
 ## What's in this repo
 
